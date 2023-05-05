@@ -106,9 +106,9 @@ public class LabP2_FredySalvador {
             } else if (contador == 6) {
         
                 
-                
+           /*     
            for (int i = 0; i < producto.size(); i++) {
-            int opcion = JOptionPane.showConfirmDialog(null, "¿Desea comprar " + producto.get(i) + " por $" + producto.get(i) + "?");
+            int opcion = JOptionPane.showConfirmDialog(null, "¿Desea comprar " + producto.get(1) + " por $" + producto.get(1) + "?");
             if (opcion == JOptionPane.YES_OPTION) {
                 compras.add(producto);
             }
@@ -123,7 +123,20 @@ public class LabP2_FredySalvador {
         }
         mensaje += "\nPrecio total de la compra: $" + total;
         JOptionPane.showMessageDialog(null, mensaje);
-        
+        */
+           
+                 for (int i = 0; i < producto.size(); i++) {
+                    JOptionPane.showMessageDialog(null, " " + producto.indexOf(producto.get(i)) + "-" + producto.get(i));
+                }
+                int posi = Integer.parseInt(JOptionPane.showInputDialog("Ingrese la posicion del producto que desea comprar"));
+                if (posi >= 0 && posi < producto.size()) {
+                    int confirmacion = JOptionPane.showConfirmDialog(null, "Esta seguro de comprarlo?");
+                    if (confirmacion == 0) {
+                        compras.add(producto.get(posi));
+                    }
+                }
+           
+           
             } else if (contador == 7) {
 
                 for (int i = 0; i < compras.size(); i++) {

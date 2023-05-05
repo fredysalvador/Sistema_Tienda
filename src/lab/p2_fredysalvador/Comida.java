@@ -47,6 +47,7 @@ private boolean Estado_Vencm;
     public String toString() {
         return "Comida{" + "Nombre=" + Nombre + ", Precio=" + Precio + ", Estado_Vencm=" + Estado_Vencm + '}';
     }
+    
 
 
 }
