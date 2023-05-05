@@ -139,8 +139,12 @@ public class LabP2_FredySalvador {
            
             } else if (contador == 7) {
 
+                
                 for (int i = 0; i < compras.size(); i++) {
                     JOptionPane.showInputDialog("" + compras.indexOf(compras.get(i)) + "-" + compras.get(i));
+                    
+                    
+                    
                 }
                 
                 
