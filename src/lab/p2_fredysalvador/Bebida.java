@@ -42,6 +42,11 @@ private Double Tamaño_Ml;
     public void setTamaño_Ml(Double Tamaño_Ml) {
         this.Tamaño_Ml = Tamaño_Ml;
     }
+
+    @Override
+    public String toString() {
+        return "Bebida{" + "Nombre=" + Nombre + ", Precio=" + Precio + ", Tama\u00f1o_Ml=" + Tamaño_Ml + '}';
+    }
     
 
 }

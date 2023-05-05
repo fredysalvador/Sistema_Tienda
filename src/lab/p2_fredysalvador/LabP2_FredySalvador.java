@@ -20,6 +20,7 @@ public class LabP2_FredySalvador {
     public static void main(String[] args) {
         // TODO code application logic here
         ArrayList producto = new ArrayList();
+        ArrayList compras = new ArrayList();
 
         //Scanner leer = new Scanner(System.in);
         int contador = 0;
@@ -68,13 +69,36 @@ public class LabP2_FredySalvador {
 
                 // System.out.println("Producto Eliminado Exitosamente");
             } else if (contador == 5) {
+            
+                for (int i = 0; i < producto.size(); i++) {
+                    JOptionPane.showInputDialog("" + producto.indexOf(producto.get(i)) + "-" + producto.get(i));
+                }
 
             } else if (contador == 6) {
+        
+                
+                
+           for (int i = 0; i < producto.size(); i++) {
+            int opcion = JOptionPane.showConfirmDialog(null, "¿Desea comprar " + producto.get(i) + " por $" + producto.get(i) + "?");
+            if (opcion == JOptionPane.YES_OPTION) {
+                compras.add(producto);
+            }
+             }
 
+        // Mostramos al usuario la lista de productos que ha decidido comprar y el precio total de la compra
+        double total = 0.0;
+        String mensaje = "Productos comprados:\n";
+        for (int i = 0; i < producto.size(); i++) {
+            mensaje += producto.get(i) + " - $" + producto.get(i) + "\n";
+          //  total += producto.get();
+        }
+        mensaje += "\nPrecio total de la compra: $" + total;
+        JOptionPane.showMessageDialog(null, mensaje);
+        
             } else if (contador == 7) {
 
             } else if (contador == 8) {
-
+            //Aqui solamente genera la salida y ya
             }
 
         }

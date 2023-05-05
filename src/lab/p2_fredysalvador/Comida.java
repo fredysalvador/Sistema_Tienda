@@ -43,5 +43,10 @@ private boolean Estado_Vencm;
         this.Estado_Vencm = Estado_Vencm;
     }
 
+    @Override
+    public String toString() {
+        return "Comida{" + "Nombre=" + Nombre + ", Precio=" + Precio + ", Estado_Vencm=" + Estado_Vencm + '}';
+    }
+
 
 }
