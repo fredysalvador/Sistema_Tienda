@@ -56,6 +56,35 @@ public class LabP2_FredySalvador {
                 producto.add(c);
 
             } else if (contador == 3) {
+                
+                                for (int i = 0; i < producto.size(); i++) {
+                    JOptionPane.showMessageDialog(null, "" + producto.indexOf(producto.get(i)) + "-" + producto.get(i));
+                }
+                int pos= Integer.parseInt(JOptionPane.showInputDialog("Ingrese la posicion a modificar: "));
+                
+                Object[] opciones = {"Verdadero", "Falso"};
+
+                // Muestra la caja de diálogo y obtiene el índice de la opción seleccionada
+                int seleccion = JOptionPane.showOptionDialog(null, "¿La comida que Ingresara Esta Vencida?", "Seleccione una opción",
+                        JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE, null, opciones, opciones[0]);
+
+                // Asigna el valor booleano correspondiente según la opción seleccionada
+                boolean valor = (seleccion == 0) ? true : false;
+                
+                if (pos >= 0 && pos < producto.size()) {
+                    if (producto.get(pos) instanceof Bebida){
+                        ((Bebida) producto.get(pos)).setNombre(JOptionPane.showInputDialog("Ingrese el nombre de la bebida: \n"));
+                        ((Bebida) producto.get(pos)).setPrecio(Double.valueOf(JOptionPane.showInputDialog("Ingrese el precio de la bebida: \n")));
+                        ((Bebida) producto.get(pos)).setTamaño_Ml(Double.valueOf(JOptionPane.showInputDialog("Ingrese el tamaño de la bebida: \n")));
+                    }
+                    if (producto.get(pos) instanceof Comida) {
+                        ((Comida) producto.get(pos)).setNombre(JOptionPane.showInputDialog(" Ingrese el nombre de la comida: \n"));
+                        ((Comida) producto.get(pos)).setPrecio(Double.valueOf(JOptionPane.showInputDialog("Ingrese el precio de la comida: \n")));
+                        ((Comida) producto.get(pos)).setEstado_Vencm(valor);
+                    }
+                } else {
+                    JOptionPane.showMessageDialog(null, "No existe ningun producto en la posicion ingresada!!!");
+                }
 
             } else if (contador == 4) {
 
@@ -90,13 +119,18 @@ public class LabP2_FredySalvador {
         String mensaje = "Productos comprados:\n";
         for (int i = 0; i < producto.size(); i++) {
             mensaje += producto.get(i) + " - $" + producto.get(i) + "\n";
-          //  total += producto.get();
+            //total += producto.get(i);
         }
         mensaje += "\nPrecio total de la compra: $" + total;
         JOptionPane.showMessageDialog(null, mensaje);
         
             } else if (contador == 7) {
 
+                for (int i = 0; i < compras.size(); i++) {
+                    JOptionPane.showInputDialog("" + compras.indexOf(compras.get(i)) + "-" + compras.get(i));
+                }
+                
+                
             } else if (contador == 8) {
             //Aqui solamente genera la salida y ya
             }
