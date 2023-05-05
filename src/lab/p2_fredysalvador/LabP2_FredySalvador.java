@@ -15,6 +15,9 @@ public class LabP2_FredySalvador {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
+        
+        
     }
     
 }
