@@ -8,8 +8,8 @@ package lab.p2_fredysalvador;
  *
  * @author Fredy Salvador
  */
-public class Comida {    
-private String Nombre;
+public class Comida {
+    private String Nombre;
 private Double Precio;
 private boolean Estado_Vencm;
 
@@ -43,7 +43,5 @@ private boolean Estado_Vencm;
         this.Estado_Vencm = Estado_Vencm;
     }
 
-    
-    
 
 }

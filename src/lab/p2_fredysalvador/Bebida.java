@@ -9,7 +9,7 @@ package lab.p2_fredysalvador;
  * @author Fredy Salvador
  */
 public class Bebida {
-private String Nombre;
+    private String Nombre;
 private Double Precio;
 private Double Tamaño_Ml;
 
@@ -42,7 +42,6 @@ private Double Tamaño_Ml;
     public void setTamaño_Ml(Double Tamaño_Ml) {
         this.Tamaño_Ml = Tamaño_Ml;
     }
-    
     
 
 }
